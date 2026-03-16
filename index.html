@@ -12,17 +12,71 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="premium-modal" data-modal>
+      <div class="premium-modal__backdrop" data-close-modal></div>
+
+      <div
+        class="premium-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="premiumModalTitle"
+      >
+        <button
+          class="premium-modal__close"
+          type="button"
+          aria-label="Закрыть"
+          data-close-modal
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="premium-modal__glow"></div>
+
+        <div class="premium-modal__content">
+          <span class="premium-modal__eyebrow">Премиальное предложение</span>
+
+          <h2 class="premium-modal__title" id="premiumModalTitle">
+            Выберите квартиру вашей мечты
+          </h2>
+
+          <p class="premium-modal__text">
+            Оставьте заявку, и персональный менеджер свяжется с вами, подберёт
+            лучшие варианты и ответит на все вопросы.
+          </p>
+
+          <form class="premium-modal__form">
+            <div class="premium-modal__field">
+              <input type="text" placeholder="Ваше имя" />
+            </div>
+
+            <div class="premium-modal__field">
+              <input type="tel" placeholder="+7 (___) ___-__-__" />
+            </div>
+
+            <div class="premium-modal__actions">
+              <button type="submit" class="premium-modal__submit">
+                Отправить заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="nav">
         <div class="logo">
-          <img src="/assests/img/logo2.webp" alt="" />
+          <a href="/">
+            <img src="/assests/img/logo.webp" alt="" />
+          </a>
         </div>
 
         <ul class="menu">
-          <li><a href="">Проекты</a></li>
-          <li><a href="">О квартирах</a></li>
-          <li><a href="">Как купить</a></li>
-          <li><a href="">Сервисы</a></li>
+          <li><a href="/about.html">О нас</a></li>
+          <li><a href="/services.html">Услуги</a></li>
+          <li><a href="/projects.html">Проекты</a></li>
+          <li><a href="/news.html">Новости</a></li>
+          <li><a href="/contact.html">Контакты</a></li>
           <li>
             <svg
               viewBox="0 0 20 4"
@@ -38,7 +92,7 @@
         </ul>
 
         <div class="right">
-          <a href="" class="phone">+7 (495) 172-73-59</a>
+          <a href="tel:+70000000000" class="phone">+7 (000) 000-00-00</a>
 
           <div class="icons">
             <!-- TELEGRAM -->
@@ -114,7 +168,7 @@
             </a>
           </div>
 
-          <button class="btn">Выбрать квартиру</button>
+          <button class="btn" data-open-modal>Оставить заявку</button>
         </div>
       </div>
     </header>
@@ -124,39 +178,48 @@
         <div class="slides">
           <div class="slide active">
             <img
-              src="https://sreda.ru/storage/images/originals/mYGmy0J7oXoN0Q2pcc6AtHh3m3H59w7gkHrIxekQ.jpg"
+              src="https://images.pexels.com/photos/259593/pexels-photo-259593.jpeg?cs=srgb&dl=pexels-pixabay-259593.jpg&fm=jpg"
             />
 
             <div class="content">
-              <h1>Ипотека для всех</h1>
+              <h1>9 лет строим дома под ключ</h1>
               <p>
-                0,1% на год | 5% на 4 года | 8% на 7 лет | 11,9% на весь срок
+                С 2017 года мы построили более 100 индивидуальных каменных домов
+                от фундамента до отделки.
               </p>
-              <a href="" class="btn-hero">Подробнее</a>
+              <a href=""  data-open-modal class="btn-hero">Подробнее</a>
             </div>
           </div>
 
           <div class="slide">
-            <img src="/assests/img/slide.webp" />
+            <img
+              src="https://images.pexels.com/photos/5563473/pexels-photo-5563473.jpeg?cs=srgb&dl=pexels-jonathanborba-5563473.jpg&fm=jpg"
+            />
 
             <div class="content">
-              <h1>Ипотека для всех</h1>
+              <h1>Каменные дома и инженерные системы</h1>
               <p>
-                0,1% на год | 5% на 4 года | 8% на 7 лет | 11,9% на весь срок
+                Проектируем и строим дома из кирпича, керамических блоков,
+                газобетона и других материалов, подключаем электричество,
+                отопление и септик.
               </p>
-              <a href="" class="btn-hero">Подробнее</a>
+              <a href="" data-open-modal class="btn-hero">Подробнее</a>
             </div>
           </div>
 
           <div class="slide">
-            <img src="/assests/img/slide3.webp" />
+            <img
+              src="https://images.pexels.com/photos/7031595/pexels-photo-7031595.jpeg?cs=srgb&dl=pexels-artbovich-7031595.jpg&fm=jpg"
+            />
 
             <div class="content">
-              <h1>Ипотека для всех</h1>
+              <h1>Участок, ипотека и сопровождение</h1>
               <p>
-                0,1% на год | 5% на 4 года | 8% на 7 лет | 11,9% на весь срок
+                Поможем подобрать земельный участок, оформить ипотеку и
+                сопроводим строительство бань, гаражей, монолитных и кровельных
+                работ.
               </p>
-              <a href="" class="btn-hero">Подробнее</a>
+              <a href="" data-open-modal class="btn-hero">Подробнее</a>
             </div>
           </div>
         </div>
@@ -179,25 +242,25 @@
           <div class="counter"><span id="current">1</span> / 3</div>
         </div>
       </section>
-      <section class="index-info">
+      <section class="index-info" id="about">
         <div class="container">
           <div class="index-info__container">
             <h1 class="index-info__title">
-              ДОМ.РФ Девелопмент – девелопер&nbsp;полного цикла с 100%
-              государственным участием
+              Строительство каменных малоэтажных домов с 2017 года
             </h1>
 
             <legend>
-              Компания основана в 2021 году. Входит в группу ДОМ.РФ.
+              Более 9 лет практики и свыше 100 индивидуальных домов, созданных
+              нами от фундамента до отделки.
             </legend>
 
             <div class="index-info__text">
               <p>
-                Девелопер опирается на&nbsp;лучшие практики мировых лидеров
-                и&nbsp;накопленную экспертизу в&nbsp;области развития жилищной
-                сферы в&nbsp;России. Это позволяет компании не&nbsp;только
-                создавать продукт нового уровня, но&nbsp;и&nbsp;задавать тренды
-                в&nbsp;индустрии.
+                Каждый дом, который мы строим, — это отражение образа жизни его
+                владельца. Мы внимательно слушаем пожелания, предлагаем
+                оптимальные решения по проектированию, материалам и инженерным
+                системам и в каждый проект вкладываем частичку нашей души. Наша
+                главная цель — строить дома, в которые хочется возвращаться.
               </p>
             </div>
           </div>
@@ -206,14 +269,14 @@
             <picture class="picture">
               <source
                 srcset="
-                  https://domrfdevelopment.ru/upload/iblock/110/dtr0bky0nx51ww5nhe11ynbq7qolvz2s.webp
+                  https://img.freepik.com/premium-photo/3d-illustration-construction-building-architecture_1276941-76719.jpg
                 "
                 type="image/webp"
               />
 
               <img
                 class="picture-img"
-                src="https://domrfdevelopment.ru/upload/iblock/110/dtr0bky0nx51ww5nhe11ynbq7qolvz2s.webp"
+                src="https://img.freepik.com/premium-photo/3d-illustration-construction-building-architecture_1276941-76719.jpg"
                 alt="ДОМ.РФ Девелопмент – девелопер&nbsp;полного цикла с 100% государственным участием"
                 loading="lazy"
               />
@@ -221,43 +284,69 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="container">
-          <h2 class="section-title">Преимущества</h2>
+          <div class="advantages-head">
+            <h2 class="section-title">Преимущества</h2>
+
+            <div class="advantages-nav">
+              <div class="advantages-prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 25 16"
+                  class="ButtonNew_button-new__icon__AEVOl ButtonNew_button-new__icon--arrow-md__XbPDR"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="1.6"
+                    d="M1 8h21M18 3l5 5-5 5"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="advantages-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 25 16"
+                  class="ButtonNew_button-new__icon__AEVOl ButtonNew_button-new__icon--arrow-md__XbPDR"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="1.6"
+                    d="M1 8h21M18 3l5 5-5 5"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
 
           <div class="swiper advantages-swiper">
             <div class="swiper-wrapper">
               <!-- CARD -->
               <div class="swiper-slide">
                 <div class="card">
-                  <img src="/assests/img/slide.webp" />
+                  <img
+                    src="https://images.pexels.com/photos/35361412/pexels-photo-35361412.jpeg?cs=srgb&dl=pexels-alef-morais-336305364-35361412.jpg&fm=jpg"
+                  />
 
-                  <h3>Индивидуальная архитектура</h3>
+                  <h3>Индивидуальные проекты каменных домов</h3>
 
                   <div class="card-overlay">
                     <p>
-                      Ключевой особенностью комплекса стала характерная кладка
-                      из серо-голубого кирпича с деталями белой, золотой и
-                      терракотовой керамики.
+                      Разрабатываем архитектурные решения под ваши задачи и
+                      образ жизни: от компактных коттеджей до просторных
+                      семейных домов.
                     </p>
 
                     <p>
-                      Активная разноэтажность обеспечивает высокую проницаемость
-                      воздуха и света.
+                      Работая с кирпичом, керамическими блоками, газобетоном и
+                      другими материалами, мы подбираем конструктив под участок
+                      и бюджет.
                     </p>
-                  </div>
-
-                  <div class="card-btn">•••</div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="card">
-                  <img src="/assests/img/slide3.webp" />
-                  <h3>Ландшафтный двор</h3>
-
-                  <div class="card-overlay">
-                    <p>Описание преимущества...</p>
                   </div>
 
                   <div class="card-btn">•••</div>
@@ -267,12 +356,19 @@
               <div class="swiper-slide">
                 <div class="card">
                   <img
-                    src="https://sreda.ru/_next/image?url=https%3A%2F%2Fsreda.ru%2Fstorage%2Fimages%2Foriginals%2F6T73GD0vqDV6uKIBXZdof5j1KBhXbof1j7roQpXp.jpg&w=480&q=70"
+                    src="https://images.unsplash.com/photo-1758448756207-54505680d130?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   />
-                  <h3>Стрит-ритейл на первых этажах</h3>
+                  <h3>Качество и долговечность строительства</h3>
 
                   <div class="card-overlay">
-                    <p>Описание преимущества...</p>
+                    <p>
+                      Строго соблюдаем технологии монолитных и каменных работ:
+                      от фундамента до кровли и отделки.
+                    </p>
+                    <p>
+                      Контролируем каждый этап строительства, чтобы дом
+                      десятилетиями оставался тёплым, надёжным и комфортным.
+                    </p>
                   </div>
 
                   <div class="card-btn">•••</div>
@@ -282,12 +378,110 @@
               <div class="swiper-slide">
                 <div class="card">
                   <img
-                    src="https://sreda.ru/_next/image?url=https%3A%2F%2Fsreda.ru%2Fstorage%2Fimages%2Foriginals%2FuoaKL300UgB7QgSfOARjfpvBLerEX0xoK6i9KPRL.jpg&w=480&q=70"
+                    src="https://images.pexels.com/photos/28652349/pexels-photo-28652349.jpeg?cs=srgb&dl=pexels-david-vinicius-562259225-28652349.jpg&fm=jpg"
                   />
-                  <h3>Увеличенная высота потолков</h3>
+                  <h3>Инженерные системы под ключ</h3>
 
                   <div class="card-overlay">
-                    <p>Описание преимущества...</p>
+                    <p>
+                      Проектируем и монтируем электричество, отопление и системы
+                      водоотведения с учётом реальной нагрузки и дальнейшей
+                      эксплуатации.
+                    </p>
+                    <p>
+                      Подбираем оборудование и решения, которые обеспечивают
+                      комфорт, энергоэффективность и безопасность дома.
+                    </p>
+                  </div>
+
+                  <div class="card-btn">•••</div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg?cs=srgb&dl=pexels-expect-best-79873-323776.jpg&fm=jpg"
+                  />
+                  <h3>Комплексное сопровождение проекта</h3>
+
+                  <div class="card-overlay">
+                    <p>
+                      Помогаем с подбором земельного участка, оформлением
+                      ипотеки и подготовкой документов.
+                    </p>
+                    <p>
+                      Строим не только дома, но и бани, гаражи, заборы, отмостки
+                      и площадки под авто — вы получаете готовый к жизни
+                      участок.
+                    </p>
+                  </div>
+
+                  <div class="card-btn">•••</div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://images.pexels.com/photos/7031595/pexels-photo-7031595.jpeg?cs=srgb&dl=pexels-artbovich-7031595.jpg&fm=jpg"
+                  />
+                  <h3>Подбор и анализ земельного участка</h3>
+
+                  <div class="card-overlay">
+                    <p>
+                      Оцениваем рельеф, грунты, подъезд, коммуникации и
+                      ограничения по застройке, чтобы дом был безопасным и
+                      удобным.
+                    </p>
+                    <p>
+                      Помогаем выбрать участок, на котором реально реализовать
+                      ваш проект без скрытых сюрпризов и лишних затрат.
+                    </p>
+                  </div>
+
+                  <div class="card-btn">•••</div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://images.pexels.com/photos/8134744/pexels-photo-8134744.jpeg?cs=srgb&dl=pexels-artbovich-8134744.jpg&fm=jpg"
+                  />
+                  <h3>Бани, гаражи и малые постройки</h3>
+
+                  <div class="card-overlay">
+                    <p>
+                      Проектируем и строим бани, гаражи, хозблоки, беседки и
+                      другие дополнительные объекты в едином стиле с домом.
+                    </p>
+                    <p>
+                      Формируем продуманную функциональную схему всего участка,
+                      а не только основного здания.
+                    </p>
+                  </div>
+
+                  <div class="card-btn">•••</div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <img
+                    src="https://images.pexels.com/photos/13201426/pexels-photo-13201426.jpeg?cs=srgb&dl=pexels-fhstudio-13201426.jpg&fm=jpg"
+                  />
+                  <h3>Ипотечное и юридическое сопровождение</h3>
+
+                  <div class="card-overlay">
+                    <p>
+                      Помогаем подобрать ипотечные программы под ваш бюджет и
+                      этапы строительства, готовим пакет документов.
+                    </p>
+                    <p>
+                      Сопровождаем сделки и оформление, чтобы вы проходили все
+                      этапы максимально спокойно и прозрачно.
+                    </p>
                   </div>
 
                   <div class="card-btn">•••</div>
@@ -297,63 +491,111 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <div class="services-head">
             <h2 class="section-title">Услуги</h2>
 
-            <a href="#" class="services-btn"> Смотреть все </a>
+            <a href="/services.html" class="services-btn"> Смотреть все </a>
           </div>
 
           <div class="swiper services-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="service-card">
+                <a href="/servicesinner.html" class="service-card">
                   <img
-                    src="/assests/img/CiOcGpRSN1V35ogyui3MHt8o17CxhFaLyD1LdDao.webp"
+                    src="https://images.pexels.com/photos/35361412/pexels-photo-35361412.jpeg?cs=srgb&dl=pexels-alef-morais-336305364-35361412.jpg&fm=jpg"
                   />
 
                   <div class="service-overlay"></div>
 
-                  <h3 class="service-name">Архитектура</h3>
-                </div>
+                  <h3 class="service-name">Проектирование домов</h3>
+                </a>
               </div>
 
               <div class="swiper-slide">
-                <div class="service-card">
+                <a href="/servicesinner.html" class="service-card">
                   <img
-                    src="/assests/img/tc2hhSq4Nv7LW5JncqGfHgRCtiCqV568CNwLczUT.webp"
+                    src="https://images.pexels.com/photos/5563473/pexels-photo-5563473.jpeg?cs=srgb&dl=pexels-jonathanborba-5563473.jpg&fm=jpg"
                   />
 
                   <div class="service-overlay"></div>
 
-                  <h3 class="service-name">Благоустройство</h3>
-                </div>
+                  <h3 class="service-name">Строительство каменных домов</h3>
+                </a>
               </div>
 
               <div class="swiper-slide">
-                <div class="service-card">
+                <a href="/servicesinner.html" class="service-card">
                   <img
-                    src="/assests/img/oAEsJbkH5Teoz3ifuurKOTvvgZZfc4zPATAweGRe.webp"
+                    src="https://images.pexels.com/photos/7031595/pexels-photo-7031595.jpeg?cs=srgb&dl=pexels-artbovich-7031595.jpg&fm=jpg"
                   />
 
                   <div class="service-overlay"></div>
 
-                  <h3 class="service-name">Интерьеры</h3>
-                </div>
+                  <h3 class="service-name">Подбор земельного участка</h3>
+                </a>
               </div>
 
               <div class="swiper-slide">
-                <div class="service-card">
+                <a href="/servicesinner.html" class="service-card">
                   <img
-                    src="/assests/img/ZrwLxPISNajUcCOHZX0KAiwMTlXThwVRrldY5vRd.webp"
+                    src="https://images.pexels.com/photos/28652349/pexels-photo-28652349.jpeg?cs=srgb&dl=pexels-david-vinicius-562259225-28652349.jpg&fm=jpg"
                   />
 
                   <div class="service-overlay"></div>
 
-                  <h3 class="service-name">Паркинг</h3>
-                </div>
+                  <h3 class="service-name">Инженерные системы</h3>
+                </a>
               </div>
+
+              <div class="swiper-slide">
+                <a href="/servicesinner.html" class="service-card">
+                  <img
+                    src="https://images.pexels.com/photos/13201426/pexels-photo-13201426.jpeg?cs=srgb&dl=pexels-fhstudio-13201426.jpg&fm=jpg"
+                  />
+
+                  <div class="service-overlay"></div>
+
+                  <h3 class="service-name">Ипотека и сопровождение</h3>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="/servicesinner.html" class="service-card">
+                  <img
+                    src="https://images.pexels.com/photos/8134744/pexels-photo-8134744.jpeg?cs=srgb&dl=pexels-artbovich-8134744.jpg&fm=jpg"
+                  />
+
+                  <div class="service-overlay"></div>
+
+                  <h3 class="service-name">Бани и гаражи</h3>
+                </a>
+              </div>
+
+              <a href="/servicesinner.html" class="swiper-slide">
+                <div class="service-card">
+                  <img
+                    src="https://images.pexels.com/photos/31737842/pexels-photo-31737842.jpeg?cs=srgb&dl=pexels-dropshado-31737842.jpg&fm=jpg"
+                  />
+
+                  <div class="service-overlay"></div>
+
+                  <h3 class="service-name">Кровельные работы</h3>
+                </div>
+              </a>
+
+              <a href="/servicesinner.html" class="swiper-slide">
+                <div class="service-card">
+                  <img
+                    src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg?cs=srgb&dl=pexels-expect-best-79873-323776.jpg&fm=jpg"
+                  />
+
+                  <div class="service-overlay"></div>
+
+                  <h3 class="service-name">Монолитные работы</h3>
+                </div>
+              </a>
             </div>
             <div class="gallery-footer">
               <div class="gallery-pagination">
@@ -407,30 +649,29 @@
         <div class="container">
           <div class="services-head">
             <h2 class="section-title">Проекты</h2>
-            <a href="#" class="services-btn">Смотреть все</a>
+            <a href="/projects.html" class="services-btn">Смотреть все</a>
           </div>
 
           <div class="swiper projects-swiper">
             <div class="swiper-wrapper">
               <!-- CARD -->
               <div class="swiper-slide">
-                <a class="project-card">
+                <a href="/projectsinner.html" class="project-card">
                   <div
                     class="project-bg"
-                    style="background-image: url(/assests/img/slide3.webp)"
+                    style="background-image: url(/assests/img/ЗГ-25.jpg)"
                   >
                     <div class="project-overlay"></div>
 
                     <div class="project-content">
-                      <h3>Студия, 24.4 м²</h3>
-                      <p class="price">18 112 120 ₽</p>
-                      <p class="price-m2">742 300 ₽/м²</p>
+                      <h3>3Г-25</h3>
+                      <p class="price">Проект каменного дома</p>
                     </div>
                   </div>
 
                   <div class="project-tags">
-                    <span>Без отделки</span>
-                    <span>Окна в пол</span>
+                    <span>Каменный дом</span>
+                    <span>Под ключ</span>
                   </div>
                 </a>
               </div>
@@ -440,21 +681,20 @@
                   <div
                     class="project-bg"
                     style="
-                      background-image: url(/assests/img/oAEsJbkH5Teoz3ifuurKOTvvgZZfc4zPATAweGRe.webp);
+                      background-image: url(/assests/img/Пальцовка-А17.jpg);
                     "
                   >
                     <div class="project-overlay"></div>
 
                     <div class="project-content">
-                      <h3>Студия, 25.12 м²</h3>
-                      <p class="price">17 240 408 ₽</p>
-                      <p class="price-m2">686 322 ₽/м²</p>
+                      <h3>Пальцовка-A17</h3>
+                      <p class="price">Проект каменного дома</p>
                     </div>
                   </div>
 
                   <div class="project-tags">
-                    <span>Окна в пол</span>
-                    <span>Конвекторы</span>
+                    <span>Каменный дом</span>
+                    <span>От фундамента до крыши</span>
                   </div>
                 </a>
               </div>
@@ -463,22 +703,19 @@
                 <a class="project-card">
                   <div
                     class="project-bg"
-                    style="
-                      background-image: url(/assests/img/ZrwLxPISNajUcCOHZX0KAiwMTlXThwVRrldY5vRd.webp);
-                    "
+                    style="background-image: url(/assests/img/СБ-69.jpg)"
                   >
                     <div class="project-overlay"></div>
 
                     <div class="project-content">
-                      <h3>Студия, 23.5 м²</h3>
-                      <p class="price">18 613 504 ₽</p>
-                      <p class="price-m2">792 064 ₽/м²</p>
+                      <h3>СБ-69</h3>
+                      <p class="price">Проект каменного дома</p>
                     </div>
                   </div>
 
                   <div class="project-tags">
-                    <span>Без отделки</span>
-                    <span>Французский балкон</span>
+                    <span>Каменный дом</span>
+                    <span>Индивидуальный проект</span>
                   </div>
                 </a>
               </div>
@@ -486,21 +723,23 @@
           </div>
         </div>
       </section>
-      <section class="news">
+      <section class="news" id="articles">
         <div class="container">
           <div class="services-head">
             <h2 class="section-title">Новости</h2>
 
-            <a href="#" class="services-btn">Смотреть все</a>
+            <a href="/news.html" class="services-btn">Смотреть все</a>
           </div>
 
           <div class="swiper news-swiper">
             <div class="swiper-wrapper">
               <!-- CARD -->
               <div class="swiper-slide">
-                <a href="#" class="news-card">
+                <a href="/newsinner.html" class="news-card">
                   <div class="news-image">
-                    <img src="/assests/img/slide3.webp" />
+                    <img
+                      src="https://images.pexels.com/photos/5563473/pexels-photo-5563473.jpeg?cs=srgb&dl=pexels-jonathanborba-5563473.jpg&fm=jpg"
+                    />
 
                     <div class="news-overlay"></div>
                   </div>
@@ -509,16 +748,16 @@
                     <div class="news-date">03.03.26</div>
 
                     <h3 class="news-name">
-                      Трейд-ин новый инструмент для покупки
+                      9 лет строим каменные дома под ключ
                     </h3>
                   </div>
                 </a>
               </div>
 
               <div class="swiper-slide">
-                <a href="#" class="news-card">
+                <a href="/newsinner.html" class="news-card">
                   <div class="news-image">
-                    <img src="/assests/img/slide.webp" />
+                    <img src="/assests/img/ЗГ-25.jpg" />
 
                     <div class="news-overlay"></div>
                   </div>
@@ -526,16 +765,16 @@
                   <div class="news-content">
                     <div class="news-date">25.02.26</div>
 
-                    <h3 class="news-name">Рассрочка 100 тыс руб. в месяц</h3>
+                    <h3 class="news-name">Новый проект дома 3Г-25 в кирпиче</h3>
                   </div>
                 </a>
               </div>
 
               <div class="swiper-slide">
-                <a href="#" class="news-card">
+                <a href="/newsinner.html" class="news-card">
                   <div class="news-image">
                     <img
-                      src="/assests/img/oAEsJbkH5Teoz3ifuurKOTvvgZZfc4zPATAweGRe.webp"
+                      src="https://images.pexels.com/photos/7031595/pexels-photo-7031595.jpeg?cs=srgb&dl=pexels-artbovich-7031595.jpg&fm=jpg"
                     />
 
                     <div class="news-overlay"></div>
@@ -544,7 +783,9 @@
                   <div class="news-content">
                     <div class="news-date">25.02.26</div>
 
-                    <h3 class="news-name">Выгода 9%</h3>
+                    <h3 class="news-name">
+                      Запустили услугу подбора земельных участков
+                    </h3>
                   </div>
                 </a>
               </div>
@@ -555,11 +796,12 @@
       <section class="subscribe-our-mailing static-form">
         <div class="container">
           <form>
-            <h3 class="h1-semibold">Подпишитесь на&nbsp;рассылку</h3>
+            <h3 class="h1-semibold">Получите расчет вашего дома</h3>
 
             <legend class="subscribe-our-mailing__sub">
-              Мы будем держать вас в курсе лучших предложений и стартов продаж
-              новых объектов недвижимости
+              Оставьте контакты, и мы бесплатно подготовим предварительный
+              расчет стоимости каменного дома с инженерными системами и свяжемся
+              с вами для уточнения деталей.
             </legend>
 
             <div class="inputs">
@@ -583,7 +825,7 @@
                 <input
                   type="email"
                   aria-label="Контактный Email"
-                  placeholder="Контактный Email"
+                  placeholder="Ваш Email для отправки расчёта"
                   value=""
                   class=""
                 />
@@ -636,13 +878,13 @@
 
             <div class="smartcaptcha-container"></div>
 
-            <button class="dom-black-button" type="submit">Подписаться</button>
+            <button class="dom-black-button" type="submit">Отправить</button>
           </form>
 
           <picture>
-            <source srcset="/assests/img/flat-form-bg.webp" type="image/webp" />
+            <source srcset="/assests/img/mockup22.png" type="image/webp" />
 
-            <img src="/assests/img/flat-form-bg.webp" alt="Подписаться" />
+            <img src="/assests/img/ctc.webp" alt="Подписаться" />
           </picture>
         </div>
       </section>
@@ -653,12 +895,12 @@
           <!-- LEFT -->
 
           <div class="footer-left">
-            <img src="/assests/img/logo2.webp" class="footer-logo" />
+            <img src="/assests/img/logo.webp" class="footer-logo" />
 
             <div class="footer-contact">
-              <a href="tel:+74951265325"> +7 (495) 126-53-25 </a>
+              <a href="tel:+70000000000"> +7 (000) 000-00-00 </a>
 
-              <a href="mailto:info@sreda.ru"> info@sreda.ru </a>
+              <a href="mailto:info@example.ru"> info@example.ru </a>
 
               <div class="footer-social">
                 <a href="#">
@@ -731,8 +973,8 @@
             </div>
 
             <div class="footer-address">
-              Россия, г. Москва,<br />
-              Павелецкая площадь, 3
+              Россия, г. Примерск,<br />
+              Улица Образцовая, 1
             </div>
 
             <a class="footer-route-btn"> Построить маршрут </a>
@@ -742,45 +984,36 @@
 
           <div class="footer-links">
             <div class="footer-col">
-              <h4>Недвижимость</h4>
-              <a>Квартиры</a>
-              <a>Динамика строительства</a>
+              <h4>О компании</h4>
+              <a href="/about.html">О нас</a>
+              <a href="/contact.html">Контакты</a>
             </div>
 
             <div class="footer-col">
-              <h4>Преимущества</h4>
-              <a>Сервисы</a>
-              <a>О квартирах</a>
-              <a>О компании</a>
+              <h4>Услуги</h4>
+              <a href="/services.html">Строительство домов</a>
+              <a href="/services.html">Инженерные системы</a>
+              <a href="/services.html">Бани и гаражи</a>
             </div>
 
             <div class="footer-col">
               <h4>Проекты</h4>
-              <a>Среда на Кутузовском</a>
-              <a>Среда на Лобачевского</a>
+              <a href="/projects.html">3Г-25</a>
+              <a href="/projects.html">Пальцовка-А17</a>
+              <a href="/projects.html">СБ-69</a>
             </div>
 
             <div class="footer-col">
-              <h4>Как купить</h4>
-              <a>Ипотека</a>
-              <a>Рассрочка</a>
-              <a>100% оплата</a>
-              <a>Трейд-ин</a>
+              <h4>Новости</h4>
+              <a href="/news.html">О строительстве домов</a>
+              <a href="/news.html">О наших проектах</a>
             </div>
 
             <div class="footer-col">
-              <h4>Компания</h4>
-              <a>Новости</a>
-              <a>Документы</a>
-              <a>Контакты</a>
-              <a>Политика обработки персональных данных</a>
-            </div>
-
-            <div class="footer-col">
-              <h4>Страхование</h4>
-              <a>Страхование жизни</a>
-              <a>Страхование имущества</a>
-              <a>Продление страхового полиса</a>
+              <h4>Контакты</h4>
+              <a href="tel:+70000000000">Телефон</a>
+              <a href="mailto:info@example.ru">Email</a>
+              <a href="">Адрес</a>
             </div>
           </div>
 
