@@ -3,9 +3,16 @@ const fills = document.querySelectorAll(".fill")
 const segments = document.querySelectorAll(".segment")
 const current = document.getElementById("current")
 const heroSlider = document.querySelector(".hero-slider")
+// INIT: yalnız 1-ci slide active olsun
+slides.forEach((slide, i) => {
+  slide.classList.remove("active")
+})
 
+if (slides.length) {
+  slides[0].classList.add("active")
+}
 let index = 0
-const duration = 5000
+const duration = 3000
 let autoTimer = null
 
 function resetProgress() {
@@ -214,3 +221,21 @@ document.querySelectorAll("[data-open-modal]").forEach(btn => {
     e.preventDefault()
   })
 })
+
+const burger = document.getElementById("burger")
+const mobileMenu = document.getElementById("mobileMenu")
+const closeBtn = document.getElementById("mobileClose")
+const overlay = document.querySelector(".mobile-overlay")
+
+burger.addEventListener("click", () => {
+  mobileMenu.classList.add("active")
+  document.body.classList.add("no-scroll")
+})
+
+closeBtn.addEventListener("click", closeMenu)
+overlay.addEventListener("click", closeMenu)
+
+function closeMenu(){
+  mobileMenu.classList.remove("active")
+  document.body.classList.remove("no-scroll")
+}
