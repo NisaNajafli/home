@@ -2017,7 +2017,7 @@ body.modal-open {
 .burger span {
   width: 18px;
   height: 2px;
-  background: #fff;
+  background: #fff !important;
   transition: 0.4s;
 }
 
@@ -2365,6 +2365,12 @@ body.modal-open {
 }
 
 @media (max-width: 768px) {
+  .footer_bottom{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
   .premium-modal__dialog {
     position: absolute;
     top: 50%;
