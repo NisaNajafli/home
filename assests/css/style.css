@@ -1512,10 +1512,6 @@ header ul li {
   gap: 30px;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
 
 .static-text li::marker {
   color: var(--green);
